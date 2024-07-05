@@ -1,6 +1,6 @@
 # MyApp
 
-## Struktur Direktori
+## Directory Structure
 
 ```plaintext
 myapp/
