@@ -1,0 +1,248 @@
+{
+	"info": {
+		"_postman_id": "60c3633c-77c6-4ac6-b1bf-b14abc855e18",
+		"name": "MTN-Myapp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9186780",
+		"_collection_link": "https://erp-ami.postman.co/workspace/ERP-Workspace~a62f43f7-7aa7-4948-a056-302a78cf268a/collection/9186780-60c3633c-77c6-4ac6-b1bf-b14abc855e18?action=share&source=collection_link&creator=9186780"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"first_name\": \"Guntur\",\r\n\"last_name\": \"Saputro\",\r\n\"phone_number\": \"0811255501\",\r\n\"address\": \"Jl. Kebon Sirih No. 1\",\r\n\"pin\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"phone_number\": \"0811255501\",\r\n\"pin\": \"123456\"\r\n} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "topup",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZV9udW1iZXIiOiIwODExMjU1NTAxIiwidG9rZW5fdHlwZSI6ImFjY2VzcyIsImV4cCI6MTcyMDI2MTE2OX0.Pl48iUTQmpxgXz-nYIAAH-3CgdgQjQen9fu51n0F0i0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"amount\": 50000\r\n} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/topup",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"topup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "payment",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZV9udW1iZXIiOiIwODExMjU1NTAxIiwidG9rZW5fdHlwZSI6ImFjY2VzcyIsImV4cCI6MTcyMDI2MTE2OX0.Pl48iUTQmpxgXz-nYIAAH-3CgdgQjQen9fu51n0F0i0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"amount\": 50000,\r\n\"remarks\": \"Pulsa Telkomsel 100k\"\r\n} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/pay",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pay"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transfer",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMzMzNTJmMmYtODc0Yy00ZjA1LWEzZTktZGNiYjJjZTMyODVlIiwicGhvbmVfbnVtYmVyIjoiMDgxMTI1NTUwMSIsInRva2VuX3R5cGUiOiJhY2Nlc3MiLCJleHAiOjE3MjAyNzMwOTJ9.4yt9T6VCsAdcksOEyYr_A5GSYsPXRKYxodmsaOfzKKE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"target_user\":\"fa1ff8a8-4ea5-4aa6-9d55-4f88175b71e6\",\r\n    \"amount\": 50000,\r\n    \"remarks\": \"Hadiah Ultah\"\r\n} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/transfer",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transfer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transaction",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMzMzNTJmMmYtODc0Yy00ZjA1LWEzZTktZGNiYjJjZTMyODVlIiwicGhvbmVfbnVtYmVyIjoiMDgxMTI1NTUwMSIsInRva2VuX3R5cGUiOiJhY2Nlc3MiLCJleHAiOjE3MjAyNjgxMTV9.KqysRDui-jZ54RzQlPPFrwwbgUybFQ_lKdgGNgWXZj0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/transactions",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update profile",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMzMzNTJmMmYtODc0Yy00ZjA1LWEzZTktZGNiYjJjZTMyODVlIiwicGhvbmVfbnVtYmVyIjoiMDgxMTI1NTUwMSIsInRva2VuX3R5cGUiOiJhY2Nlc3MiLCJleHAiOjE3MjAyNjgxMTV9.KqysRDui-jZ54RzQlPPFrwwbgUybFQ_lKdgGNgWXZj0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"first_name\": \"Tom\",\r\n\"last_name\": \"Araya\",\r\n\"address\": \"Jl. Diponegoro No. 215\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/profile",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"profile"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
